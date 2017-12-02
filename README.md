@@ -1,2 +1,2 @@
 # kivisChristmasCalendar
-I want to cheer up my friends so I have create an easy christmas calender for them
+I want to cheer my friends up so I am creating an simple Christmas Calender for them!
