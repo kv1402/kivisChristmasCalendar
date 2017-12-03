@@ -1,11 +1,17 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 public class DayButton {
+	
+	private int date = Calendar.getInstance().get(Calendar.DATE);
+	
+	
 	
 	
 	private JButton button1 = new JButton("1st Dec");
@@ -39,6 +45,13 @@ public class DayButton {
 	
 	public DayButton(){
 		
+		// Suprise gets created
+		JFrame frame = new JFrame();
+		frame.setSize(1200, 1200);
+		frame.setTitle("Tips from Kivi");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		
 		buttons.add(button1);
 		buttons.add(button2);
 		buttons.add(button3);
@@ -66,11 +79,22 @@ public class DayButton {
 		
 		//listen to button and check it its click then display
 		for (final JButton button : buttons) {
-	          button.addActionListener(new ActionListener() {
-	            @Override
-	            public void actionPerformed(ActionEvent e) {
-	            	JOptionPane.showMessageDialog(null, messages.getHappyMessage(buttons.indexOf(button)),"Calender", JOptionPane.OK_OPTION);
-	            }
+	          button.addActionListener(new ActionListener() { 
+	        	  @Override
+		            public void actionPerformed(ActionEvent e) {
+	        		  if( buttons.indexOf(button) + 1 <= date){ 
+	        			  
+	        			  FaceComponent component = new FaceComponent(buttons.indexOf(button));
+	        				frame.add(component);
+	        				
+	        				frame.setVisible(true);
+	        			  
+		            	//JOptionPane.showMessageDialog(null, messages.getHappyMessage(buttons.indexOf(button)),"Calender", JOptionPane.OK_OPTION);
+		            }else{
+		            	JOptionPane.showMessageDialog(null, "HI, dont try to cheat! You have to wait ! ","Calender", JOptionPane.OK_OPTION);
+		            }
+	        	 }
+	          
 	          });
 		}
 		}

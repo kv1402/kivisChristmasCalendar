@@ -7,31 +7,68 @@ public class Suprise {
 	private ArrayList<String> happyMessage = new ArrayList<String>();
 	
 	
-	String first= "Hello, welcome to my calendar. I have made some stuff to make your day a little bit happpier(?) through this stressful time period";
-	String sec= "What to do, what to do? Well you can start playing christmas music and just take a cup of coffee and relax ;) - I will be back - kivi";
-	String third= "Its Monday people! Do you know what that means? New week new opportunities. Get out there and do something great for yourself!!!!! ";
-	String fourth= "Today, I challenge you to smile at 3 strangers! Maybe you made them happy or you just creeped them out?";
-	String fifth= " Watch the tedtalks with Shawn Achor - he talks about the happy secret to better work";
-	String sixth= "Listen to \"Earth, Wind and Fire - September\", maybe you get happy and want to dance?";
-	String seventh= "Think of 3 things that you are grateful for? It can be everything (what you ate today, did today, your parents etc.)";
-	String eighth= "Well, some of you are wondering where I get my energy from? My secrets are: PEOPLE and LEARNING!! Lets learn something today:DDD";
-	String ninth = "Sometimes, I forget to thank the people who make my life so happy in so many ways. Sometimes, I forget to tell them how much I really "
-			+ "do appreciate them for being an important part of my life. so thank YOU, all of you , just for being here for me!";
-	String tenth= "Third Sunday in Advent, well what to do today? You can go out and enjoy the snow outside or say thank you to a friend? ";
-	String eleventh= "U have standards! Remember dont plan to lower them for anybody.... including yourself ";
-	String twelwth= "Random fact about kivi: I get sometimes hungover of just eating food which are high on sugar... Not good but you can eat some for me plz!";
-	String thirtheenth= "What do you say to your crying sister? ----- Do you have a CRY SIS? :))))";
+	String first= "Hello, welcome to my calendar."
+			+ "\nI have made some stuff for you."
+			+ "\nI hope you will like it! PS!"
+			+ "\nI am not pro. This is just 4 fun."
+			+ "\nEnjoy - Have a nice day!!";
+	String sec= "What to do, what to do? Well you can\n"
+			+ "turn on the christmas music and relaxing\n"
+			+ "With a cup of coffee;) - I will be back - kivi";
+	String third= "Its Monday!!! Do you know what thats mean? New week\n"
+			+ "new opportunities. Get out there and do something great\n"
+			+ " for yourself!!!!! ";
+	String fourth= "Today, I challenge you to smile at 3 strangers!\n"
+			+ "Maybe you made them happy or you just creeped them out?";
+	String fifth= " Watch the tedtalks with Shawn Achor - he talks\n"
+			+ "about the happy secret to better work";
+	String sixth= "Listen to \"Earth, Wind and Fire - September\",\n"
+			+ "maybe you get happy and want to dance?";
+	String seventh= "Think of 3 things that you are grateful for?\n"
+			+ "It can be everything (what you ate today, did today etc.)";
+	String eighth= "Well, some of you are wondering where I get my\n"
+			+ "energy from? My secrets are: PEOPLE and LEARNING!!\n"
+			+ "Lets learn something new today:DDD";
+	String ninth = "Sometimes, I forget to thank the people who\n"
+			+ "make my life so happy in so many ways. Sometimes,\n"
+			+ "I forget to tell them how much I really do\n"
+			+ "appreciate them for being an important part of my\n"
+			+ "life. so thank YOU, all of you , just for being\n"
+			+ "here for me!";
+	String tenth= "Third Sunday in Advent, well what to do today? You\n"
+			+ "can go out and enjoy the snow outside or say thank you\n"
+			+ "to a friend? ";
+	String eleventh= "U have standards! Remember dont plan to lower\n"
+			+ "them for anybody.... including yourself ";
+	String twelwth= "Random fact about kivi: I get sometimes hungover\n"
+			+ "of just eating food which are high on sugar... Not good\n"
+			+ "but you can eat some for me plz!";
+	String thirtheenth= "What do you say to your crying sister? ----- Do you\n"
+			+ "have a CRY SIS? :))))";
 	String fourtheenth= "Listen to the song: Shakira - Try everything";
-	String fiftheenth= "What is your plan for today? Are you planning on doing something fun? Or just stay at home and relax - all things are legit. Remember to take care of yourself!";
-	String sixteenth= "There are so many beautiful reasons to be happy... can you think of three?";
-	String seventeenth= " Last sunday in advent, remember to light 4 candle lights today. Make some hot cocoa and eat some gingerbreads. XoXo from your kivi";
-	String eighteenth= "All I want for Christmas is _ _  _ _  _ _ _ _!! I challenge you to send a wish to someone special!";
+	String fiftheenth= "What is your plan for today? Are you planning on doing\n"
+			+ "something fun? Or just stay at home and relax.\n"
+			+ "Remember to take care of yourself!";
+	String sixteenth= "There are so many beautiful reasons to be happy...\n"
+			+ "can you think of three?";
+	String seventeenth= " Last sunday in advent, remember to light 4 candle lights today.\n"
+			+ "Make some hot cocoa and eat some gingerbreads. XoXo from your kivi";
+	String eighteenth= "All I want for Christmas is _ _  _ _  _ _ _ _!!\n"
+			+ "I challenge you to send a wish to someone special!";
 	String nineteenth= "Friends make the Good times Better and the HARD times Easier!";
-	String twenth= "Knock, Knock! - Who's there? - Cows go. - Cow go who? - No, Silly. Cows go MOOO!";
-	String twentyFirst= "Hi, I hear you're good at algebra.....Will you replace my eX without asking Y?";
-	String twentySecond= " If Al Gore tried his hand as a musician, what would his album be called? Algorithms.";
-	String twentyThird= "One day left, are you excited? - The key to being happy is knowing you have the power to choose what to accept and what to let go";
-	String twentyFourth= " Merry Christmas, I kivi wish you the best and remember to be grateful and have fun today! You deserve it!"; //kanskje legge til en film her eller noe
+	String twenth= "Knock, Knock!\n"
+			+ "- Who's there?\n"
+			+ "Cows go.\n"
+			+ "Cow go who?\n"
+			+ "No, Silly.\nCows go MOOO!";
+	String twentyFirst= "Hi, I hear you're good at algebra.....Will you replace\n"
+			+ "my eX without asking Y?";
+	String twentySecond= " If Al Gore tried his hand as a musician, what would his\n"
+			+ "album be called? Algorithms.";
+	String twentyThird= "One day left, are you excited? - The key to being happy is knowing\n"
+			+ "you have the power to choose what to accept and what to let go";
+	String twentyFourth= " Merry Christmas, I kivi wish you the best and remember\n"
+			+ "to be grateful and have fun today! You deserve it!"; //kanskje legge til en film her eller noe
 	
 	public Suprise(){
 		happyMessage.add(first);
