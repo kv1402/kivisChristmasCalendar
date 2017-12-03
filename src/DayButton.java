@@ -3,6 +3,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 
 public class DayButton {
 	
@@ -33,7 +34,7 @@ public class DayButton {
 	private JButton button24 = new JButton("24th Dec");
 	
 	
-	ArrayList<JButton> buttons = new ArrayList<JButton>();
+	private ArrayList<JButton> buttons = new ArrayList<JButton>();
 	Suprise messages = new Suprise();
 	
 	public DayButton(){
@@ -63,6 +64,15 @@ public class DayButton {
 		buttons.add(button23);
 		buttons.add(button24);
 		
+		//listen to button and check it its click then display
+		for (final JButton button : buttons) {
+	          button.addActionListener(new ActionListener() {
+	            @Override
+	            public void actionPerformed(ActionEvent e) {
+	            	JOptionPane.showMessageDialog(null, messages.getHappyMessage(buttons.indexOf(button)),"Calender", JOptionPane.OK_OPTION);
+	            }
+	          });
+		}
 		}
 		
 	public JButton getButton(int i){

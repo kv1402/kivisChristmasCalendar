@@ -4,10 +4,10 @@ import javax.swing.JButton;
 
 public class Suprise {
 	
-	ArrayList<String> happyMessage = new ArrayList<String>();
+	private ArrayList<String> happyMessage = new ArrayList<String>();
 	
 	
-	String first= "Hello, welcome to my calendar. I have made some stuff to try to suprise you or cheer you up through this stressful time period";
+	String first= "Hello, welcome to my calendar. I have made some stuff to make your day a little bit happpier(?) through this stressful time period";
 	String sec= "What to do, what to do? Well you can start playing christmas music and just take a cup of coffee and relax ;) - I will be back - kivi";
 	String third= "Its Monday people! Do you know what that means? New week new opportunities. Get out there and do something great for yourself!!!!! ";
 	String fourth= "Today, I challenge you to smile at 3 strangers! Maybe you made them happy or you just creeped them out?";
