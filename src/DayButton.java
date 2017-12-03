@@ -1,4 +1,5 @@
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 import javax.swing.JButton;
@@ -33,8 +34,10 @@ public class DayButton {
 	
 	
 	ArrayList<JButton> buttons = new ArrayList<JButton>();
+	Suprise messages = new Suprise();
 	
 	public DayButton(){
+		
 		buttons.add(button1);
 		buttons.add(button2);
 		buttons.add(button3);
@@ -60,10 +63,8 @@ public class DayButton {
 		buttons.add(button23);
 		buttons.add(button24);
 		
+		}
 		
-		
-	}
-	
 	public JButton getButton(int i){
 		return buttons.get(i);
 	}

@@ -6,6 +6,7 @@ public class Suprise {
 	
 	ArrayList<String> happyMessage = new ArrayList<String>();
 	
+	
 	String first= "Hello, welcome to my calendar. I have made some stuff to try to suprise you or cheer you up through this stressful time period";
 	String sec= "What to do, what to do? Well you can start playing christmas music and just take a cup of coffee and relax ;) - I will be back - kivi";
 	String third= "Its Monday people! Do you know what that means? New week new opportunities. Get out there and do something great for yourself!!!!! ";
