@@ -5,6 +5,7 @@ import java.util.Calendar;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 public class DayButton {
@@ -44,13 +45,7 @@ public class DayButton {
 	Suprise messages = new Suprise();
 	
 	public DayButton(){
-		
-		// Suprise gets created
-		JFrame frame = new JFrame();
-		frame.setSize(1200, 1200);
-		frame.setTitle("Tips from Kivi");
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
+
 		
 		buttons.add(button1);
 		buttons.add(button2);
@@ -82,16 +77,23 @@ public class DayButton {
 	          button.addActionListener(new ActionListener() { 
 	        	  @Override
 		            public void actionPerformed(ActionEvent e) {
+	        		  //check the day presses is less or the same as date
 	        		  if( buttons.indexOf(button) + 1 <= date){ 
 	        			  
-	        			  FaceComponent component = new FaceComponent(buttons.indexOf(button));
+	        			// Suprise gets created
+	        				JFrame frame = new JFrame();
+	        				frame.setSize(1200, 1200);
+	        				frame.setTitle("Tips from Kivi");
+	        				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	        			 
+	        			 //mapper knappene sammen med suprise
+	        				FaceComponent component = new FaceComponent(buttons.indexOf(button));
 	        				frame.add(component);
-	        				
+	        				frame.getContentPane().validate();
+	        				frame.getContentPane().repaint();
 	        				frame.setVisible(true);
-	        			  
-		            	//JOptionPane.showMessageDialog(null, messages.getHappyMessage(buttons.indexOf(button)),"Calender", JOptionPane.OK_OPTION);
 		            }else{
-		            	JOptionPane.showMessageDialog(null, "HI, dont try to cheat! You have to wait ! ","Calender", JOptionPane.OK_OPTION);
+		            	JOptionPane.showMessageDialog(null, "HI, dont try to cheat! You have to wait " + (buttons.indexOf(button)+1 -date)+ " more day(s) ","Calender", JOptionPane.OK_OPTION);
 		            }
 	        	 }
 	          

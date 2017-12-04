@@ -15,6 +15,12 @@ import javax.swing.JComponent;
 
 public class FaceComponent extends JComponent{
 	
+	int R = (int)(Math.random()*256);
+	int G = (int)(Math.random()*256);
+	int B = (int)(Math.random()*256);
+	
+	Color randomColor = new Color(R,G,B);
+	
 	
 	private int number;
 	Suprise messages = new Suprise();
@@ -23,17 +29,17 @@ public class FaceComponent extends JComponent{
 		this.number=number;
 	}
 	
-
-	
 	public void paintComponent(Graphics g){
-		
 		
 		//Recover Graphics2D
 		Graphics2D g2 = (Graphics2D) g;
+		super.paintComponent(g2);
+		//g2.clearRect(0, 0, 1200, 1200);
 		
+			
 		//Draw the head
 		Ellipse2D.Double head = new Ellipse2D.Double(20, 40, 400, 600);
-		g2.setColor(Color.BLACK);
+		g2.setColor(randomColor);
 		g2.fill(head);
 		g2.draw(head);
 		
@@ -63,13 +69,15 @@ public class FaceComponent extends JComponent{
 		g2.setFont(new Font("TimesRoman", Font.PLAIN, 50));
 		g2.getFontMetrics();
 		//husk 
-		//g2.drawString("", 5, 700);
-	     drawString(g2,messages.getHappyMessage(this.number), 5, 600);
+		//g2.drawString("", 5, 700); 
+		drawString(g2,messages.getHappyMessage(this.number), 5, 600);
+		
 	}
 	
 	 private void drawString(Graphics g, String text, int x, int y) {
          for (String line : text.split("\n"))
              g.drawString(line, x, y += g.getFontMetrics().getHeight());
+         
      }
 
 //	private void drawtabString(Graphics g, String text, int x, int y) {
