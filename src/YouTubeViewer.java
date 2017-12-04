@@ -1,55 +1,47 @@
-import javafx.application.Application;
-import javafx.collections.ListChangeListener;
-import javafx.collections.MapChangeListener;
-import javafx.scene.Group;
-import javafx.scene.Scene;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaView;
-import javafx.scene.media.Track;
-import javafx.stage.Stage;
+import java.awt.BorderLayout;
 
-/**
- * A sample media player which loops indefinitely over the same video
- */
-public class MediaPlayer extends Application {
-private static final String MEDIA_URL = "https://youtu.be/DcYPIpT2VRY";
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
+import javax.swing.WindowConstants;
 
-private static String arg1;
+import chrriis.dj.nativeswing.swtimpl.NativeInterface;
+import chrriis.dj.nativeswing.swtimpl.components.JWebBrowser;
 
-    @Override public void start(Stage stage) {
-        stage.setTitle("Media Player");
 
-// Create media player
-        Media media = new Media((arg1 != null) ? arg1 : MEDIA_URL);
-        javafx.scene.media.MediaPlayer mediaPlayer = new javafx.scene.media.MediaPlayer(media);
-        mediaPlayer.setAutoPlay(true);
-        mediaPlayer.setCycleCount(javafx.scene.media.MediaPlayer.INDEFINITE);
-
-// Print track and metadata information
-        media.getTracks().addListener(new ListChangeListener<Track>() {
-public void onChanged(Change<? extends Track> change) {
-                System.out.println("Track> "+change.getList());
-            }
-        });
-        media.getMetadata().addListener(new MapChangeListener<String,Object>() {
-public void onChanged(MapChangeListener.Change<? extends String, ? extends Object> change) {
-                System.out.println("Metadata> "+change.getKey()+" -> "+change.getValueAdded());
-            }
-        });
-
-// Add media display node to the scene graph
-        MediaView mediaView = new MediaView(mediaPlayer);
-        Group root = new Group();
-        Scene scene = new Scene(root,800,600);
-        root.getChildren().add(mediaView);
-        stage.setScene(scene);
-        stage.show();
-    }
+public class YouTubeViewer {
 
 public static void main(String[] args) {
-if (args.length > 0) {
-            arg1 = args[0];
+	
+    NativeInterface.open();
+    SwingUtilities.invokeLater(new Runnable() {
+    	
+        public void run() {
+            JFrame frame = new JFrame("YouTube Viewer");
+            frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+            frame.getContentPane().add(getBrowserPanel(), BorderLayout.CENTER);
+            frame.setSize(800, 600);
+            frame.setLocationByPlatform(true);
+            frame.setVisible(true);
         }
-        Application.launch(args);
-    }
+    });
+    
+    NativeInterface.runEventPump();
+    // Closing native components
+    Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
+        @Override
+        public void run() {
+            NativeInterface.close();
+        }
+    }));
+}
+
+public static JPanel getBrowserPanel() {
+    JPanel webBrowserPanel = new JPanel(new BorderLayout());
+    JWebBrowser webBrowser = new JWebBrowser();
+    webBrowserPanel.add(webBrowser, BorderLayout.CENTER);
+    webBrowser.setBarsVisible(false);
+    webBrowser.navigate("https://www.youtube.com/watch?v=kYXiegTXsEs");
+    return webBrowserPanel;
+}
 }

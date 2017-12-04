@@ -19,7 +19,8 @@ public class Suprise {
 			+ "new opportunities. Get out there and do something great\n"
 			+ " for yourself!!!!! ";
 	String fourth= "Today, I challenge you to smile at 3 strangers!\n"
-			+ "Maybe you made them happy or you just creeped them out?";
+			+ "Maybe you make them happy or you just make them feel\n"
+			+ "creeped them out?";
 	String fifth= " Watch the tedtalks with Shawn Achor - he talks\n"
 			+ "about the happy secret to better work";
 	String sixth= "Listen to \"Earth, Wind and Fire - September\",\n"
@@ -62,7 +63,8 @@ public class Suprise {
 			+ "Cow go who?\n"
 			+ "No, Silly.\nCows go MOOO!";
 	String twentyFirst= "Hi, I hear you're good at algebra.....Will you replace\n"
-			+ "my eX without asking Y?";
+			+ "my eX without asking Y? HEHEH *pick up line* - Listen to:\n"
+			+ "Nas -I can ;)";
 	String twentySecond= " If Al Gore tried his hand as a musician, what would his\n"
 			+ "album be called? Algorithms.";
 	String twentyThird= "One day left, are you excited? - The key to being happy is knowing\n"
